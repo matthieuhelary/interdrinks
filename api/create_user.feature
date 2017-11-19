@@ -1,7 +1,13 @@
-Feature: As an authorized user, I want to be able to create a user with the API
+Feature: Create a user with the API
+  In order to be able to define the properties of a product
+  As a product manager
+  I need to create a text attribute
+  
+  Background : 
+  Given I am loggued-in as "Matthieu"
 
   Scenario: Create a user on a B2B website
-  When I create a user on with:
+  When I create a user with:
   | email | johndoe@example.com |
   | firstName | John |
   | lastName | DOE |
