@@ -1,4 +1,4 @@
-Feature: 
+Feature: Login
 In order to perform several actions on website
 As a user
 I need to be able to login
