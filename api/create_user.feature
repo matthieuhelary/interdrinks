@@ -1,4 +1,4 @@
-Feature : As an authorized user, I want to be able to create a user with the API
+Feature: As an authorized user, I want to be able to create a user with the API
 
   Scenario: Create a user on a B2B website
   When I create a user on with:
