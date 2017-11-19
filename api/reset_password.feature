@@ -1,7 +1,7 @@
 Feature: Reset password
 In order to perform several actions
 As a user
-I need to able to reset my password
+I need to be able to reset my password
 
 Background:
 Given I have an account
