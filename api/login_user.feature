@@ -3,7 +3,7 @@ In order to perform several actions on website
 As a user
 I need to be able to login
 
-Background :
+Background:
 Given I have an account
 
 Scenario: Login
