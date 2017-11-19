@@ -1,4 +1,10 @@
-Feature: As a user, I want to be able to login with the API
+Feature: 
+In order to perform several actions on website
+As a user
+I need to be able to login
+
+Background :
+Given I have an account
 
 Scenario: Login
 Given I give the data :
