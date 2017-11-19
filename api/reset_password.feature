@@ -3,7 +3,7 @@ In order to perform several actions
 As a user
 I need to able to reset my password
 
-Backgroud:
+Background:
 Given I have an account
 
 Scenario: 
