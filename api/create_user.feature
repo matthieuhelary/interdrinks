@@ -1,7 +1,7 @@
 Feature: Create a user with the API
-  In order to be able to define the properties of a product
+  In order to be able to create a user
   As a product manager
-  I need to create a text attribute
+  I need to create a user with the API
   
   Background : 
   Given I am loggued-in as "Matthieu"
