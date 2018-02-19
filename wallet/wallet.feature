@@ -1,4 +1,3 @@
-"""
 [{
 	"@id": "/customers/1234",
 	"walletAmount": 30.00,
@@ -707,6 +706,3 @@ Then I should get the following response :
 {code}
 
 Wallet: ajouter un endpoint pour crediter à la main avec une raison
-
-
-
