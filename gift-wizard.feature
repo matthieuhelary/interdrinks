@@ -82,3 +82,5 @@ Scenario: Click on a |choice2|
 	Then the list of products should be edited in comparison to previous answers 
 	And I should see a sentence to announce end of gift wizard
 {code}
+
+Scenario : Last question
