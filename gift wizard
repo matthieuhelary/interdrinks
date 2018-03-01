@@ -1,0 +1,16 @@
+Background: 
+	Given I'm on "/8-cadeaux" 
+
+@giftwizard 
+Scenario: Display gift wizard block
+	Given I'm on "/8-cadeaux"
+	When I look the top of the page
+	Then I should see the gift wizard block
+	And it should display |question1|
+	And it should display a field |answer1| 
+
+Scenario: Answer |question1|
+	Given I see the gift wizard block
+	When I click in field |answer1| to answer
+	Then it should open a research in comparison to the beginning of my answer
+	And I should see a button "OK" to validate my answer
