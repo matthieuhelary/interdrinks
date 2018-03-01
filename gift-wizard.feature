@@ -1,6 +1,7 @@
-@giftwizard 
+@gift-wizard 
 Background: 
-	Given I'm on "/8-cadeaux" 
+	Given I'm on "/8-cadeaux" page
+	And I am on shop id 1
 
 {code}
 Scenario: Display gift wizard block
