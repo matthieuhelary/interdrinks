@@ -1,18 +1,15 @@
+@account @order
 Feature: Display customer data
 As a customer
 I need to get data regarding my account
 
 Background: 
 	Given I am authenticated as customer on a shop
-	And shop isn't id 13
+	And shop is different than id 13
 
-
-@my-account @order-list
 {code}
 Scenario: My account all my orders
-	Given I'm on "/my-account"
-	When I click on tab "All my orders"
-	Then I should arrive on "/my-account/order"
+	When I'm on "/my-account/order"
 	And I should see the list of all my orders 
 {code}
 
@@ -27,7 +24,7 @@ Scenario: Sort orders by period
 {code}
 
 {code}
-Scenario: order summary
+Scenario: Order summary
 	Given I'm on "/my-account/order"
 	And there is an order summary
 	Then I should see the following informations
@@ -90,7 +87,7 @@ Scenario: Hide empty section
 
 @my-account @order-details
 {code}
-Scenario: Oppen order details
+Scenario: Open order details
 	Given I'm on "/my-account/order"
 	And there is an order id "502333"
 	When I click on the order summary
@@ -98,14 +95,14 @@ Scenario: Oppen order details
 	And I should have the following details 
 	|article number 		|
 	|total 					|
-	|Porduct_list			|
+	|Product_list			|
 	|Billing_address		|
 	|Delivery address 		|
 {code}
 
 {code}
 Scenario: product details
-	Given I'm on "/my-account/order/502333"
+	When I'm on "/my-account/order/502333"
 	Then I should see for each product of the order
 	|product_name		|Tripel Karmeliet 	|
 	|quantity_ordered	|6					|
@@ -115,7 +112,7 @@ Scenario: product details
 
 {code}
 Scenario: Address details
-	Given I'm on "/my-account/order/502333"
+	When I'm on "/my-account/order/502333"
 	Then I should see for each billing address
 	|line	|element 	|example 		|
 	|1		|civility	|M. 			|
