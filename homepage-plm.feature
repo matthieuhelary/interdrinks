@@ -1,5 +1,3 @@
-"""
-
 "homepage": [{
 		"top-banner": {
 			"@id": "/api/pagelayouts/1",
@@ -12,12 +10,6 @@
 				},
 			"custom-css": ".featured { display:none;}
 					.new_homebanner .banner_footerblock .banner_more a { color:#000;}
-					@media screen and (max-width: 480px) {
-					.new_homebanner .homebanner .banner_textblock 
-                      {max-width: 100% !important;}}
-					.featured a {     background-color: #fabd0f;}
-					.featured a:after { border-color: transparent #fabd0f transparent transparent;}
-					.featured a:before { border-color: transparent transparent #fabd0f transparent;}
 					.new_homebanner .homebanner {
 					background-color: #ffffff;}",
 			"active":true,
@@ -57,17 +49,17 @@
 			"@type":"widget",
 			"html":"<div class="fastshipping_block">
        	 			 <div class="fastshipping_antibreakage clearfix">
-            		<div class="icon">
-            		<a href="https://www.saveur-biere.com/fr/lp/25-cadeaux">
-            		<img src="https://img.saveur-biere.com/home/cms/page_cms/2018_02_06_14_39_29picto_cadeau_v2.png"; alt="cadeaux"; width="90%">
-            		</a>
-            		</div>
-            		<div class="left_text">
-            		<a href="https://www.saveur-biere.com/fr/lp/25-cadeaux">
+            			<div class="icon">
+            			<a href="https://www.saveur-biere.com/fr/lp/25-cadeaux">
+            			<img src="https://img.saveur-biere.com/home/cms/page_cms/2018_02_06_14_39_29picto_cadeau_v2.png"; alt="cadeaux"; width="90%">
+            			</a>
+            			</div>
+            			<div class="left_text">
+            			<a href="https://www.saveur-biere.com/fr/lp/25-cadeaux">
                 		<h1 class="header">Trouvez le cadeau idéal<span class="remove_mobileversion"></span> </h1>
-						<p>Coffret, Beerkit, Carte cadeau... peu importe l'occasion, nous avons le cadeau qu'il vous faut !</p>
-                    </a>
-                	</div>
+				<p>Coffret, Beerkit, Carte cadeau... peu importe l'occasion, nous avons le cadeau qu'il vous faut !</p>
+                    		</a>
+                		</div>
           			</div>
 					</div>",
 			"active":true,
@@ -111,5 +103,3 @@
 			"css":"null"
 		}
 }]
-
-"""
