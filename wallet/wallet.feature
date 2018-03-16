@@ -1,3 +1,4 @@
+"""
 [{
 	"@id": "/customers/1234",
 	"walletAmount": 30.00,
@@ -315,8 +316,126 @@ Scenario: KPI
 @wallet @landing-page
 Feature: Wallet landing page
 
+Background: 
+Given I am off 
+
+
+Scenario: Email prefilled 
+	Given I'm on referral landing page
+	Then I should find the following field to fill :
+	| Email |
+	And solutions to share link are hidden
+
+
+Scenario: Validate email
+	Given I'm on referral landing page
+	And I fill the email field
+	When I click on "Next" button 
+	Then solutions to share link are displayed
+
+
+Background: 
+Given I am on 
+
+
+Scenario: Email prefilled 
+	Given I'm on referral landing page
+	Then I should find the following field prefilled :
+	| Email | bastien.marecaux@gmaio.com |
+
+
+Scenario: Copy paste URL
+When I click on "Referral code" input
+Then the URL should be copy paste on my clipboard 
+
+
+Scenario: Share the referral code via Email
+When I click on "Share" button
+And I select "Email"
+Then my email client should launch
+And I should have the following informations pre-filled :
+""
+Subject: 
+
+Body:
+
+""
+
+
+Scenario: Share the referral code via SMS
+When I click on "Share" button
+And I select "SMS"
+Then my SMS should launch
+And I should have the following message pre-filled
+""
+Message
+
+""
+
+Scenario: Don't display SMS option if user is on Desktop
+When I click on "Share" button
+And I am on desktop
+Then I shouldn't see "SMS" sharing option
+
+
+Scenario: Share the referral code via Facebook
+When I click on "Share" button
+And I select on "Facebook"
+Then 
+
+"""
+Description: 
+Have a look on this documentation :
+https://developers.facebook.com/docs/sharing/webmasters
+"""
+
+Scenario: Share the referral code via Messenger
+When I click on "Share" button
+And I select on "Messenger"
+Then 
+
+Scenario: Share the referral code via Twitter
+When I click on "Share" button
+And I select on "Twitter"
+Then 
+
 @wallet @account
 Feature: Add wallet into account
+
+{code}
+Scenario: Account creation referral
+	Given I opened the referral link
+	When I arrive on "/login"
+	Then I should have following pre-filled information : 
+	| code 					| BASTII29 			|
+	| You get invited by 	| Bastien Marécaux	|
+{code}
+
+{code}
+Scenario: Account creation referral fields
+	Given I opened the referral link
+	When I arrive on "/login"
+	Then I should have following field to fill : 
+	| civility 			|
+	| firstname 		|
+	| lastname 			|
+	| Email 			|
+	| Birthday day 		|
+	| Birthday month 	|
+	| Birthday year 	|
+	| Password 			|
+	| Confirm Password 	|
+{code}
+
+{code}
+Scenario: Click on create button
+	Given I opened the referral link
+	And I arrived on "/login"
+	And I filled all details 
+	When I click on "Create account" button 
+	Then My account should be created
+	And I should receive 5€ on my wallet 	 
+{code}
 
 ____________________________________________________________________________________________________________________________________________________
 {code}
@@ -706,3 +825,6 @@ Then I should get the following response :
 {code}
 
 Wallet: ajouter un endpoint pour crediter à la main avec une raison
+
+
+
